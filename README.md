@@ -20,6 +20,17 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
+def selection_sort(nums):
+    for i in range(len(nums)):
+        lowest_value_index = i
+        for j in range(i+1, len(nums)):
+            if nums[j] < nums[lowest_value_index]:
+                lowest_value_index = j
+        nums[i], nums[lowest_value_index] = nums[lowest_value_index],nums[i]
+        
+list_of_nums = eval(input())
+selection_sort(list_of_nums)
+print(list_of_nums)
 
 
 
@@ -28,7 +39,18 @@ i)	#Selection Sort
 ```
 ii)	#Insertion Sort
 ```
-
+def insertion_sort(nums):
+    for i in range(1, len(nums)):
+        item_to_insert = nums[i]
+        j = i -1
+        while j>= 0 and nums[j] > item_to_insert:
+            nums[j+1] = nums[j]
+            j -= 1
+        nums[j+1] = item_to_insert
+        
+list_of_nums = eval(input())
+insertion_sort(list_of_nums)
+print(list_of_nums)
 
 
 
@@ -37,6 +59,19 @@ ii)	#Insertion Sort
 ```
 
 ## Output:
+i)	#Selection Sort
+
+
+
+
+![image](https://github.com/22002102/Sorting-Algorithm/assets/119091638/d189a73f-242a-4189-a04c-99c024946e15)
+
+
+ii)	#Insertion Sort
+
+
+![image](https://github.com/22002102/Sorting-Algorithm/assets/119091638/c4474ba3-5465-4bd4-8888-1dae3dc4246f)
+
 
 
 ## Result:
